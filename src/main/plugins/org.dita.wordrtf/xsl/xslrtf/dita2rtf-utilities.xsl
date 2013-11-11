@@ -8,18 +8,7 @@ xmlns:stringUtils="org.dita.dost.util.StringUtils" exclude-result-prefixes="stri
 
   <xsl:template name="get-ascii">
     <xsl:param name="txt"/>
-    <xsl:variable name="ancestorlang">
-      <xsl:call-template name="getLowerCaseLang"/>
-    </xsl:variable>
-    <xsl:choose>
-      <xsl:when test="( (string-length($ancestorlang)=5 and contains($ancestorlang,'zh-cn')) or (string-length($ancestorlang)=2 and contains($ancestorlang,'zh')) )">
-        <xsl:text>\f13 </xsl:text>
-        <xsl:value-of select="stringUtils:getAscii(string($txt))"/>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$txt"/>
-      </xsl:otherwise>
-    </xsl:choose>
+    <xsl:value-of select="$txt"/>
   </xsl:template>
 
   <xsl:template name="getStringRTF">
