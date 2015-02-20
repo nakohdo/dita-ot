@@ -364,4 +364,10 @@ See the accompanying license.txt file for applicable licenses.
   <variable id="#menucascade-separator"> &gt; </variable>
   <variable id="#quote-start">„</variable>
   <variable id="#quote-end">“</variable>
+	
+	
+	<variable id="Related tasks"></variable>
+	<variable id="Related concepts"></variable>
+	
+	
 </vars>
