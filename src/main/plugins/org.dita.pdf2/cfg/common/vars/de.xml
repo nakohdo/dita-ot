@@ -141,7 +141,15 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- The string used to label an preface within the table of contents. -->
     <variable id="Table of Contents Preface">Einleitung </variable>
-    <variable id="Preface title">Einleitung</variable>
+    
+		<!-- The string used to label an preface within the table of contents. -->
+		<variable id="Table of Contents Notices"/>
+		
+		<!-- The string used to label an preface in body text. -->
+		<variable id="Preface title">Einleitung</variable>
+	
+		<!-- The string used to label an notices in body text. -->
+		<variable id="Notices title">Notice</variable>
 
     <!-- The heading to put at the top of a chapter when creating a
          chapter-level "mini-TOC" -->
