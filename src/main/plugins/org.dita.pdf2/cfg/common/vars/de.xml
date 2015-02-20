@@ -149,7 +149,7 @@ See the accompanying license.txt file for applicable licenses.
 		<variable id="Preface title">Einleitung</variable>
 	
 		<!-- The string used to label an notices in body text. -->
-		<variable id="Notices title">Notice</variable>
+		<variable id="Notices title">Anmerkungen</variable>
 
     <!-- The heading to put at the top of a chapter when creating a
          chapter-level "mini-TOC" -->
@@ -227,7 +227,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- Template for generated page number of a reference
          in chm/html, when referenced element has no title. -->
-    <variable id="This link">diese Verbindung</variable>
+    <variable id="This link">dieser Link</variable>
 
     <!-- Image path to use for a note of "note" type. -->
     <variable id="note Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
@@ -260,6 +260,12 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- Image path to use for a note of "other" type. -->
     <variable id="other Note Image Path">Configuration/OpenTopic/cfg/common/artwork/hand.gif</variable>
+	
+		<!-- The title of the links to child topics -->
+		<variable id="Child topics">Untergeordnete Topics</variable>
+	
+		<!-- The title of the links to Related references -->
+		<variable id="Related references">Zugehörige Referenzen</variable>
 
     <!--
        Strings used in the online-help publishing.
@@ -270,9 +276,12 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- The title of the "index" button in online-help output -->
     <variable id="Index button title">Index</variable>
+	
+		<!-- The separator of multiple index entries in online-help output -->
+		<variable id="Index multiple entries separator">, </variable>
 
     <!-- The title of the "search" button in online-help output -->
-    <variable id="Search button title">Suche</variable>
+    <variable id="Search button title">Suchen</variable>
 
     <!-- The title of the "back" button in online-help output -->
     <variable id="Back button title">Zurück</variable>
@@ -281,28 +290,42 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Forward button title">Vorwärts</variable>
 
     <!-- The title of the "main page" button in online-help output -->
-    <variable id="Main page button title">Hauptseite</variable>
+    <variable id="Main page button title">Startseite</variable>
 
     <!-- The title of the "previous page" button in online-help output -->
     <variable id="Previous page button title">Vorige Seite</variable>
 
     <!-- The title of the "next page" button in online-help output -->
-    <variable id="Next page button title">Folgende Seite</variable>
+    <variable id="Next page button title">Nächste Seite</variable>
 
     <!-- The "online help" document title prefix in online-help output -->
-    <variable id="Online help prefix">On-line-Hilfe</variable>
+    <variable id="Online help prefix">Online-Hilfe</variable>
 
     <!-- The search by index field title in online-help output -->
     <variable id="Search index field title">Suche nach dem Schlüsselwort:</variable>
 
     <!-- The search by index button title in online-help output -->
-    <variable id="Search index button title">Sehen Sie</variable>
+    <variable id="Search index button title">Anzeigen</variable>
 
     <!-- The search by text field title in online-help output -->
-    <variable id="Search text field title">Suchhilfe für:</variable>
+    <variable id="Search text field title">Hilfe durchsuchen nach:</variable>
 
     <!-- The search by text button title in online-help output -->
     <variable id="Search text button title">Suche</variable>
+	
+		<variable id="Online Help Search Method Field">Suchmethode</variable>
+		<variable id="Online Help Search Method Or">ODER</variable>
+		<variable id="Online Help Search Method And">UND</variable>
+		<variable id="Search Highlight Switch">Text in Suchergebnissen hervorheben</variable>
+		<variable id="Search index next button title">Nächstes anzeigen</variable>
+		<variable id="Search Whole Words Switch">Nur ganzes Wörter suchen</variable>
+		<variable id="Search Case Sensitive Switch">Groß- und Kleinschreibung beachten</variable>
+		<variable id="Search Stopped Message">Die Suche wurde nach 50 Treffern abgebrochen.</variable>
+		<!--This one is a java script expression. So if the order of message should be another 
+			don't forget to add '+' and quotes to the string expressions.-->
+		<variable id="Search Excluded Stop Words Message">"Die folgenden Wörter wurden bei der Suche nicht berücksichtigt: "+<param ref-name="stop-words-list"/></variable>
+		<variable id="Search Search in Progress Message">Suche läuft...</variable>
+		<variable id="Search Search Give No Results Message">Keine Treffer gefunden.</variable>
 
     <!--Label for a step with importance="optional"-->
     <variable id="Optional Step">Optional:</variable>
