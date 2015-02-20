@@ -123,7 +123,11 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Table of Contents">Inhalt</variable>
 
     <variable id="Index Continued String">Fortsetzung</variable>
-    <variable id="Index See String">, Siehe </variable>
+    
+		<!-- The string before see element-->
+		<variable id="Index See String">, Siehe </variable>
+		
+		<!-- The string before see also element-->
     <variable id="Index See Also String">Siehe auch </variable>
 
     <!-- The string used to label a chapter within the table of contents. -->
