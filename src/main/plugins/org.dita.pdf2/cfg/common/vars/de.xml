@@ -158,7 +158,7 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="#note-separator">: </variable>
 
     <!-- Text to use for 'Notice' label generated from <note> element. -->
-    <variable id="Notice"><!--TODO:Notice--></variable>
+    <variable id="Notice">Anmerkung</variable>
 
     <!-- Text to use for figure titles. Renders as part of <fig>/<title>
           elements. -->
