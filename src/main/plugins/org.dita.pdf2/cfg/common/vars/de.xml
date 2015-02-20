@@ -299,17 +299,32 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Task Prereq">Vorbereitungen</variable>
     <variable id="Task Context">Warum und wann dieser Vorgang ausgeführt wird</variable>
     <variable id="Task Steps">Prozedur</variable>
-  <variable id="#steps-unordered-label"><variable id="Task Steps"/></variable>
+  	<variable id="#steps-unordered-label"><variable id="Task Steps"/></variable>
     <variable id="Task Result">Ergebnisse</variable>
     <variable id="Task Example">Beispiel</variable>
     <variable id="Task Postreq">Nächste Maßnahme</variable>
-    <variable id="Glossary odd footer"/>
-    <variable id="Glossary even footer"/>
+    
+		<!--Glossary Variables-->
+		<!-- The footer that appears on the odd-numbered glossary pages. -->
+		<variable id="Glossary odd footer"/>
+    
+		<!-- The footer that appears on the even-numbered glossary pages. -->
+	<variable id="Glossary even footer"/>
+	
+		<!-- The header that appears on the odd-numbered glossary pages. -->
     <variable id="Glossary odd header"><param ref-name="prodname"/> | <param ref-name="heading"/> | <param ref-name="pagenum"/></variable>
-    <variable id="Glossary even header"><param ref-name="pagenum"/> | <param ref-name="heading"/> | <param ref-name="prodname"/></variable>
-    <variable id="Glossary">Glossar</variable>
-    <variable id="List of Tables">Tabellenverzeichnis</variable>
-    <variable id="List of Figures">Abbildungsverzeichnis</variable>
+		
+		<!-- The header that appears on the even-numbered glossary pages. -->  
+		<variable id="Glossary even header"><param ref-name="pagenum"/> | <param ref-name="heading"/> | <param ref-name="prodname"/></variable>
+	
+		<!-- The heading string to put at the top of the Glossary -->
+		<variable id="Glossary">Glossar</variable>
+    
+		<!-- The heading string to put at the top of the List of Tables -->
+		<variable id="List of Tables">Tabellenverzeichnis</variable>
+	
+		<!-- The heading string to put at the top of the List of Figures -->  
+		<variable id="List of Figures">Abbildungsverzeichnis</variable>
 
   <variable id="#menucascade-separator"> &gt; </variable>
   <variable id="#quote-start">„</variable>
