@@ -27,6 +27,7 @@ import java.util.Map;
 import static org.dita.dost.util.Constants.*;
 import static org.dita.dost.util.FileUtils.*;
 import static org.dita.dost.util.URLUtils.*;
+import static org.dita.dost.reader.GenListModuleReader.*;
 
 
 /**
@@ -52,7 +53,7 @@ import static org.dita.dost.util.URLUtils.*;
 public final class DitaWriterFilter extends AbstractXMLFilter {
 
     /** Default value map. */
-    private Map<String, Map<String, String>> defaultValueMap = null;
+    private Map<String, Map<String, String>> defaultValueMap;
     /** Absolute path to current source file. */
     private File currentFile;
     /** Absolute path to current destination file. */
@@ -65,7 +66,7 @@ public final class DitaWriterFilter extends AbstractXMLFilter {
 
     /**
      * Set default value map.
-     * @param defaultMap default value map, may be {@code null}
+     * @param defaultMap default value map
      */
     public void setDefaultValueMap(final Map<String, Map<String, String>> defaultMap) {
         defaultValueMap  = defaultMap;
@@ -167,6 +168,12 @@ public final class DitaWriterFilter extends AbstractXMLFilter {
                         atts.getValue(ATTRIBUTE_NAME_SCOPE).equals(ATTR_SCOPE_VALUE_LOCAL)){
                     attValue = replaceHREF(attQName, atts).toString();
                 }
+            } else if(ATTRIBUTE_NAME_FORMAT.equals(attQName)) {
+                final String format = atts.getValue(ATTRIBUTE_NAME_FORMAT);
+                // verify format is correct
+                if (isFormatDita(format)) {
+                    attValue = ATTR_FORMAT_VALUE_DITA;
+                }
             }
             XMLUtils.addOrSetAttribute(res, atts.getURI(i), atts.getLocalName(i), attQName, atts.getType(i), attValue);
         }
@@ -181,7 +188,7 @@ public final class DitaWriterFilter extends AbstractXMLFilter {
      * @return attribute value or default
      */
     private String getAttributeValue(final String elemQName, final String attQName, final String value) {
-        if (StringUtils.isEmptyString(value) && defaultValueMap != null && !defaultValueMap.isEmpty()) {
+        if (StringUtils.isEmptyString(value) && !defaultValueMap.isEmpty()) {
             final Map<String, String> defaultMap = defaultValueMap.get(attQName);
             if (defaultMap != null) {
                 final String defaultValue = defaultMap.get(elemQName);
